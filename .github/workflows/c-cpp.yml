@@ -20,7 +20,7 @@ jobs:
     - name: gitmodle
       run: git submodule update --init
     - name: gitmodle2
-      run: git thirdparty/boost update --init  
+      run: cd thirdparty/boost  && git  update --init  
     - name: configure
       run: ./build/premake.sh
     - name: make
