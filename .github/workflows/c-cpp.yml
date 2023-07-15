@@ -21,7 +21,14 @@ jobs:
       run: git submodule update --init
       # - uses: codacy/git-version@2.4.0
       # - name: gitmodle2
-      #  run: cd thirdparty/boost  && git  update --init  
+      #  run: cd thirdparty/boost  && git  update --init
+    - name: Setup premake
+      # You may pin to the exact commit or the version.
+      # uses: abel0b/setup-premake@e6b11de582d0183c5ebefc87ab45c8084685594f
+      uses: abel0b/setup-premake@v2.2
+      with:
+        # Premake version
+        version:v5.0.0-beta2 
     - name: configure
       run: ./build/premake.sh
     - name: make
