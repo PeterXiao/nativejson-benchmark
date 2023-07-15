@@ -19,6 +19,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: gitmodle
       run: git submodule update --init
+    - uses: codacy/git-version@2.4.0
     - name: gitmodle2
       run: cd thirdparty/boost  && git  update --init  
     - name: configure
